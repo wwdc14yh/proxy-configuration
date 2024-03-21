@@ -5,10 +5,11 @@ const modifyResponse = (response) => {
       data.data.current_device.trial_end_at = 1742436947;
       data.data.current_device.trial_status = 1;
     }
+    return JSON.stringify(data);
   } catch (e) {
     console.error("Error modifying response", e);
   }
-  return data;
+  return response.body;
 };
 const body = modifyResponse($response);
 $done({ body });
