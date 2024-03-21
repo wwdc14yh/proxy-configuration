@@ -13,4 +13,5 @@ const modifyResponse = (response) => {
   return response.body;
 };
 const body = modifyResponse($response);
+console.log("body: ", body)
 $done({ body });
